@@ -140,7 +140,6 @@ footer{background:#102f20;color:#eef4e9;margin-top:72px}.foot{max-width:1200px;m
 <article class="card"><img src="images/brightening-glow.jpg" alt="Brightening and Glow Soap"><div class="card-body"><span class="tag">Glow care</span><h3>Brightening & Glow Soap</h3><p>A refreshing handmade bar designed for a fresh-looking glow.</p><div class="benefit">✓ Helps enhance a bright, fresh-looking glow</div></div></article>
 </div>
 </section>
-</section>
 
 <section class="section" id="shampoo">
   <div class="heading">
@@ -214,10 +213,12 @@ footer{background:#102f20;color:#eef4e9;margin-top:72px}.foot{max-width:1200px;m
 <div class="form-group"><label for="customerName">Customer Name *</label><input id="customerName" type="text" required placeholder="Enter your name"></div>
 <div class="form-group"><label for="phone">Mobile Number *</label><input id="phone" type="tel" required placeholder="03XX-XXXXXXX"></div>
 <div class="form-group"><label for="city">City *</label><input id="city" type="text" required placeholder="Your city"></div>
-<div class="form-group"><label for="soap">Soap *</label><select id="soap" required>
+<div class="form-group"><label for="soap">product *</label><select id="soap" required>
 <option value="">Select soap</option>
 <option>Aloe Vera Soap</option><option>Turmeric Soap</option><option>Rice Soap</option><option>Coffee Soap</option><option>Neem Soap</option><option>Orange Soap</option><option>Multani Mitti Soap</option><option>Lemon Soap</option><option>Mulethi + Jaifal Soap</option><option>Tomato Soap</option><option>Whitening Soap</option><option>Brightening & Glow Soap</option>
 <option>Mulethi Skin Serum - Custom Order</option>
+<option>Herbal Shampoo - Custom Order - 200 ml</option>
+<option>Herbal Shampoo - Custom Order - 300 ml</option>
 </select></div>
 <div class="form-group"><label for="quantity">Quantity *</label><input id="quantity" type="number" min="1" value="1" required></div>
 <div class="form-group"><label for="payment">Payment Method *</label><select id="payment" required><option>50% Advance + 50% COD</option></select></div>
@@ -233,7 +234,7 @@ event.preventDefault();
 const v=id=>document.getElementById(id).value.trim();
 const message="Assalam o Alaikum, I want to place an order from Root & Cleansing.\n\n"+
 "Customer Name: "+v("customerName")+"\nMobile Number: "+v("phone")+"\nCity: "+v("city")+"\n"+
-"Soap: "+v("soap")+"\nQuantity: "+v("quantity")+"\nPayment: "+v("payment")+"\n"+
+"Product: "+v("soap")+"\nQuantity: "+v("quantity")+"\nPayment: "+v("payment")+"\n"+
 "Delivery Address: "+v("address")+"\nOrder Notes: "+(v("notes")||"None");
 window.open("https://wa.me/923245329011?text="+encodeURIComponent(message),"_blank");
 }
